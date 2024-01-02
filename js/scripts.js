@@ -6,25 +6,25 @@ function newItem() {
 
   //checking if value is empty 
   if (inputText === '') {
-    alert("You must write something!");
+    alert('You must write something!');
   } else {
     $('#list').append(newLi);
-    $('#input').val(""); // Reset input field
+    $('#input').val(''); // Reset input field
   }
 
   //crossing out an item from list
   function crossOut() {
-    newLi.toggleClass("strike");
+    newLi.toggleClass('strike');
   }
-  newLi.on("dblclick", crossOut);
+  newLi.on('dblclick', crossOut);
 
   //adding delete button X
   let crossOutButton = $('<button class="crossOutButton">X</button>');
   newLi.append(crossOutButton);
   function deleteListItem() {
-    newLi.addClass("delete");
+    newLi.addClass('delete');
   }
-  crossOutButton.on("click", deleteListItem);
+  crossOutButton.on('click', deleteListItem);
 
 }
 
